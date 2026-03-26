@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers - Sorteador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="info-section">
+            <div class="logo">
+                <img src="https://img.icons8.com/ios-filled/50/a855f7/clover.png" alt="Logo"> 
+                <span>NUMBERS</span>
+            </div>
+            <p class="tagline">ONLINE - GRATUITO</p>
+            <h1>SORTEADOR <br> DE NÚMEROS</h1>
+            
+            <div class="faq">
+                <details>
+                    <summary>Como funciona o sorteador?</summary>
+                    <p>Utilizamos algoritmos de geração aleatória dentro do intervalo definido por você.</p>
+                </details>
+                <details>
+                    <summary>Posso escolher o intervalo?</summary>
+                    <p>Sim, você define o valor mínimo e o máximo para o sorteio.</p>
+                </details>
+            </div>
+        </section>
+
+        <section class="form-section" id="config-area">
+            <h2>QUERO SORTEAR:</h2>
+            <p>Defina o intervalo e a quantidade, depois clique em "Sortear".</p>
+
+            <div class="input-group">
+                <div class="field">
+                    <label>NÚMEROS</label>
+                    <input type="number" id="quantidade" value="2" min="1">
+                </div>
+                <div class="field">
+                    <label>DE</label>
+                    <input type="number" id="minimo" value="1">
+                </div>
+                <div class="field">
+                    <label>ATÉ</label>
+                    <input type="number" id="maximo" value="100">
+                </div>
+            </div>
+
+            <div class="toggle-container">
+                <label class="switch">
+                    <input type="checkbox" id="nao-repetir" checked>
+                    <span class="slider"></span>
+                </label>
+                <span>Não repetir número</span>
+            </div>
+
+            <button id="btn-sortear">SORTEAR &rarr;</button>
+        </section>
+
+        <section class="result-section hidden" id="result-area">
+            <h2>RESULTADO DO SORTEIO</h2>
+            <div id="numeros-sorteados" class="numbers-display"></div>
+            <button id="btn-reiniciar">SORTEAR NOVAMENTE ↻</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
