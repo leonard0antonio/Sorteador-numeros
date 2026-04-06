@@ -28,7 +28,7 @@
 
 ## 🖼️ Aparência e Interação
 
-![Demo da aplicação](demo.png)
+![Demo da aplicação](Demo.png)
 
 ---
 
