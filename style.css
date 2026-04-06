@@ -88,3 +88,44 @@ button:hover {
 .switch input { opacity: 0; }
 .slider { position: absolute; cursor: pointer; background: #333; transition: .4s; border-radius: 34px; inset: 0; }
 input:checked + .slider { background: var(--primary); }
+
+/* =========================================
+   Responsividade
+   ========================================= */
+
+/* Telas médias / Tablets (até 900px) */
+@media (max-width: 900px) {
+    .container {
+        gap: 40px; /* Reduz o espaço enorme entre as colunas antes de empilhar */
+        padding: 20px;
+    }
+}
+
+/* Celulares (até 600px) */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Transforma as colunas em linhas (empilha tudo) */
+        gap: 30px; 
+        align-items: center; /* Centraliza o conteúdo inteiro na tela */
+        text-align: center;
+    }
+
+    /* Permite que os inputs desçam para a linha de baixo se faltar espaço */
+    .input-group {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Ajuste para não deixar os inputs numéricos muito largos no celular */
+    .field {
+        flex: 1;
+        min-width: 60px; 
+    }
+
+    /* Reduz o tamanho da fonte dos números em destaque para não vazar a tela */
+    .numbers-display {
+        font-size: 2.2rem;
+        flex-wrap: wrap; /* Se houver muitos números, eles vão para a próxima linha */
+        gap: 15px;
+    }
+}
